@@ -1,0 +1,243 @@
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+img {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.8rem;
+  margin-right: 1.4rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0rem 3rem;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.3rem;
+  span {
+    font-size: 1.1rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.3rem;
+  background-color: $Light-grayish-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+Main Code
+*/
+
+main {
+  width: 77%;
+  height: 57rem;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "box1 box1 box2 box5"
+    "box3 box4 box4 box5";
+  column-gap: 3rem;
+  row-gap: 2.5rem;
+
+  .cards {
+    border-radius: 0.5rem;
+    ul {
+      li {
+        .user-section {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  #Daniel-card {
+    grid-area: box1;
+    background-color: $Daniel-card;
+    position: relative;
+    z-index: 0;
+
+    #quotation-mark {
+      position: absolute;
+      width: 19%;
+      height: 36%;
+      border: none;
+      border-radius: 0;
+      margin: 0;
+      top: 0%;
+      right: 15%;
+      z-index: 1;
+    }
+
+    ul {
+      position: relative;
+      z-index: 2;
+      li {
+        .user-section {
+          h1 {
+            color: $Light-gray;
+            span {
+              color: hsla(0, 0%, 81%, 50%);
+            }
+          }
+        }
+        h2 {
+          color: white;
+        }
+        p {
+          color: hsla(0, 0%, 81%, 70%);
+        }
+      }
+    }
+  }
+  #Jonathan-card {
+    grid-area: box2;
+    background-color: $Jonathan-card;
+
+    ul {
+      li {
+        .user-section {
+          h1 {
+            color: $Light-gray;
+            span {
+              color: hsla(0, 0%, 81%, 50%);
+            }
+          }
+        }
+        h2 {
+          color: white;
+        }
+        p {
+          color: hsla(0, 0%, 81%, 70%);
+        }
+      }
+    }
+  }
+  #Jeanette-card {
+    grid-area: box3;
+    background-color: $white;
+
+    ul {
+      li {
+        .user-section {
+          h1 {
+            color: $Patrick-card;
+            span {
+              color: hsla(217, 30%, 14%, 50%);
+            }
+          }
+        }
+        h2 {
+          color: $Patrick-card;
+          margin-bottom: 2rem;
+        }
+        p {
+          color: hsla(217, 30%, 14%, 70%);
+        }
+      }
+    }
+  }
+  #Patrick-card {
+    grid-area: box4;
+    background-color: $Patrick-card;
+
+    ul {
+      li {
+        .user-section {
+          h1 {
+            color: $Light-gray;
+            span {
+              color: hsla(0, 0%, 81%, 50%);
+            }
+          }
+        }
+        h2 {
+          color: white;
+          margin-bottom: 2rem;
+        }
+        p {
+          color: hsla(0, 0%, 81%, 70%);
+          margin-right: 0.6rem;
+        }
+      }
+    }
+  }
+  #Kira-card {
+    grid-area: box5;
+    background-color: $white;
+
+    ul {
+      li {
+        .user-section {
+          h1 {
+            color: $Patrick-card;
+            span {
+              color: hsla(217, 30%, 14%, 50%);
+            }
+          }
+        }
+        h2 {
+          color: $Patrick-card;
+          margin-bottom: 2.4rem;
+        }
+        p {
+          color: hsla(217, 30%, 14%, 70%);
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 960px) {
+  main {
+    height: 90%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  #quotation-mark {
+    height: 50%;
+  }
+}
